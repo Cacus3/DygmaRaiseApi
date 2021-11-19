@@ -16,7 +16,7 @@ export class DygmaModule {
 			},
 		  ],
 		  imports:[
-			  LedControllModule,
+			  LedControllModule.register(options),
 			  SerialModule.register(options),
 		  ]
 		};
