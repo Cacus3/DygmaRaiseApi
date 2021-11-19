@@ -4,7 +4,7 @@
   "description": "NodeJS api for dygma Raise",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "repository": "https://github.com/Cacus3/DygmaRaiseApi",
+  "repository": "https://github.com/Cacus3/NestJS-DygmaRaiseApi",
   "keywords": [
     "NestJS",
     "Dygma",
