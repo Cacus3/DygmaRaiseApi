@@ -15,6 +15,11 @@ export class LedControllService {
 		}
 		this.LedMaps.push(new LedMap('backlight', backlight));
 		this.LedMaps.push(new LedMap('neuron', [131]));
+		const all = [];
+		for (let i = 0; i <= 131; i++) {
+			all.push(i);
+		}
+		this.LedMaps.push(new LedMap('all', all));
 	}
 
 	setLeds(color: Color, ledIDs: number[]) {
@@ -44,6 +49,19 @@ export class LedControllService {
 			}
 		}
 		return rtn;
+	}
+
+	async getLedsGroupedByColor(ledIDs: number[]) {
+		const allleds:Led[] = await this.getLeds(ledIDs);
+		let map = {};
+		for(let led of allleds){
+			if(map[led.color.toRGB('.')]){
+				map[led.color.toRGB('.')].push(led.id)
+			} else {
+				map[led.color.toRGB('.')] = [led.id]
+			}
+		}
+		return map;
 	}
 
 	getLedMap(name: string): LedMap {

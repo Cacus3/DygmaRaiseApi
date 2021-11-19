@@ -27,4 +27,8 @@ export class Color {
 
 		return new Color({ red, green, blue });
 	}
+
+	toRGB(separator=''){
+		return `${this.red}${separator}${this.green}${separator}${this.blue}`
+	}
 }
