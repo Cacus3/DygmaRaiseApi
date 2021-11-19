@@ -1,11 +1,15 @@
 {
   "name": "dygmaraiseapi",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "JS api for dygma Raise",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "https://github.com/Cacus3/DygmaRaiseApi",
-  "keywords": ["NestJS","Dygma","DygmaRaise"],
+  "keywords": [
+    "NestJS",
+    "Dygma",
+    "DygmaRaise"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf dist && tsc",
