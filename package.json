@@ -1,5 +1,5 @@
 {
-  "name": "dygmaraiseapi",
+  "name": "nestjs-dygmaraiseapi",
   "version": "0.0.8",
   "description": "NodeJS api for dygma Raise",
   "main": "dist/index.js",
