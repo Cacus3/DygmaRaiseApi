@@ -1,6 +1,8 @@
 import { DynamicModule, Module } from '@nestjs/common';
-import { AppModuleOptions, APP_OPTIONS } from '../app.module';
+import { AppModuleOptions } from '../interfaces'
+import { APP_OPTIONS } from '../consts';
 import { SerialService } from './serial.service';
+
 
 
 

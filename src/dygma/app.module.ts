@@ -1,21 +1,10 @@
 import { DynamicModule, Module } from '@nestjs/common';
+import { APP_OPTIONS } from './consts';
+import { AppModuleOptions } from './interfaces';
 import { LedControllModule } from './ledControl/ledControll.module';
 import { SerialModule } from './serial/serial.module';
-
-export interface AppModuleOptions {
-	portName: string;
-  }
-
-export const APP_OPTIONS = 'APP_OPTIONS';
-
-@Module({
-	imports: [
-		SerialModule,
-		LedControllModule,
-	],
-	providers: [],
-	exports:[SerialModule,LedControllModule]
-})
+  
+@Module({})
 export class DygmaModule {
 	static register(options: AppModuleOptions): DynamicModule {
 		return {
@@ -26,6 +15,10 @@ export class DygmaModule {
 			  useValue: options,
 			},
 		  ],
+		  imports:[
+			  LedControllModule,
+			  SerialModule.register(options),
+		  ]
 		};
 	  }
 }

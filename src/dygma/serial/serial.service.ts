@@ -2,7 +2,7 @@ import { Inject, Injectable, OnApplicationBootstrap } from '@nestjs/common';
 import * as SerialPort from 'serialport';
 import { createInterface as createInterface } from 'readline';
 import { Result } from './result';
-import { APP_OPTIONS } from '../app.module';
+import { APP_OPTIONS } from '../consts';
 
 export interface AppOptions {
 	portName: string;
