@@ -14,11 +14,12 @@ export const APP_OPTIONS = 'APP_OPTIONS';
 		LedControllModule,
 	],
 	providers: [],
+	exports:[SerialModule,LedControllModule]
 })
-export class AppModule {
+export class DygmaModule {
 	static register(options: AppModuleOptions): DynamicModule {
 		return {
-		  module: AppModule,
+		  module: DygmaModule,
 		  providers: [
 			{
 			  provide: APP_OPTIONS,
