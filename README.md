@@ -20,7 +20,7 @@ main.ts:
 import { NestFactory } from '@nestjs/core';
 import { LedControllService } from 'dygmaraiseapi';
 import { AppModule } from './app.module';
-import { Color } from './color';
+import { Color } from 'dygmaraiseapi';
 
 async function bootstrap(): Promise<void> {
 	const app = await NestFactory.create(AppModule);
