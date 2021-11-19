@@ -1,6 +1,6 @@
 {
   "name": "dygmaraiseapi",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "JS api for dygma Raise",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
