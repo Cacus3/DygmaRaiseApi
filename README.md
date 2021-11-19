@@ -1,11 +1,11 @@
-# DygmaRaiseApi
+# NestJS DygmaRaiseApi
 A package for NestJS to comunicate with Dygma Raise
 
 # Usage
 app.module.ts:
 ```
 import { Module } from '@nestjs/common';
-import { DygmaModule } from 'dygmaraiseapi';
+import { DygmaModule } from 'nestjs-dygmaraiseapi';
 import { AppService } from './app.service';
 
 @Module({
@@ -18,9 +18,9 @@ export class AppModule {}
 main.ts:
 ```
 import { NestFactory } from '@nestjs/core';
-import { LedControllService } from 'dygmaraiseapi';
+import { LedControllService } from 'nestjs-dygmaraiseapi';
 import { AppModule } from './app.module';
-import { Color } from 'dygmaraiseapi';
+import { Color } from 'nestjs-dygmaraiseapi';
 
 async function bootstrap(): Promise<void> {
 	const app = await NestFactory.create(AppModule);
