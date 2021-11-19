@@ -1,5 +1,5 @@
 # DygmaRaiseApi
-A package for nestJS to comunicate with Dygma Raise
+A package for NestJS to comunicate with Dygma Raise
 
 # Usage
 app.module.ts:
